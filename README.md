@@ -1,4 +1,4 @@
-# generator-wp2-typescript [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-wp-2-tsc [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > 
 
 ## Installation
@@ -29,10 +29,11 @@ MIT © [Andy Lui]()
 
 
 [npm-image]: https://badge.fury.io/js/generator-wp-2-tsc.svg
-[npm-url]: https://npmjs.org/package/generator-wp-2-tsc.svg
+[npm-url]: https://npmjs.org/package/generator-wp-2-tsc
 [travis-image]: https://travis-ci.org/awlui/generator-wp-2-tsc.svg?branch=master
-[travis-url]: https://travis-ci.org/awlui/generator-wp-2-tsc.svg
+[travis-url]: https://travis-ci.org/awlui/generator-wp-2-tsc
 [daviddm-image]: https://david-dm.org/awlui/generator-wp-2-tsc.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/awlui/generator-wp-2-tsc.svg
-[coveralls-image]: https://coveralls.io/repos/awlui/generator-wp-2-tsc.svgt/badge.svg
-[coveralls-url]: https://coveralls.io/r/awlui/generator-wp-2-tsc.svg
+[daviddm-url]: https://david-dm.org/awlui/generator-wp-2-tsc
+[coveralls-image]: https://coveralls.io/repos/awlui/generator-wp-2-tsc/badge.svg
+[coveralls-url]: https://coveralls.io/r/awlui/generator-wp-2-tsc
+https://badge.fury.io/js/generator-wp-2-tsc.svg
