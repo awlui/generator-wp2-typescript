@@ -3,7 +3,7 @@
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-wp2-typescript using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-wp-2-tsc using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
@@ -28,11 +28,11 @@ yo wp-2-tsc
 MIT © [Andy Lui]()
 
 
-[npm-image]: https://badge.fury.io/js/generator-wp2-typescript.svg
-[npm-url]: https://npmjs.org/package/generator-wp2-typescript
-[travis-image]: https://travis-ci.org/awlui/generator-wp2-typescript.svg?branch=master
-[travis-url]: https://travis-ci.org/awlui/generator-wp2-typescript
-[daviddm-image]: https://david-dm.org/awlui/generator-wp2-typescript.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/awlui/generator-wp2-typescript
-[coveralls-image]: https://coveralls.io/repos/awlui/generator-wp2-typescript/badge.svg
-[coveralls-url]: https://coveralls.io/r/awlui/generator-wp2-typescript
+[npm-image]: https://badge.fury.io/js/generator-wp-2-tsc.svg
+[npm-url]: https://npmjs.org/package/generator-wp-2-tsc.svg
+[travis-image]: https://travis-ci.org/awlui/generator-wp-2-tsc.svg?branch=master
+[travis-url]: https://travis-ci.org/awlui/generator-wp-2-tsc.svg
+[daviddm-image]: https://david-dm.org/awlui/generator-wp-2-tsc.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/awlui/generator-wp-2-tsc.svg
+[coveralls-image]: https://coveralls.io/repos/awlui/generator-wp-2-tsc.svgt/badge.svg
+[coveralls-url]: https://coveralls.io/r/awlui/generator-wp-2-tsc.svg
