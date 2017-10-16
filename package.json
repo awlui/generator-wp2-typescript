@@ -1,7 +1,8 @@
 {
   "name": "generator-wp-2-tsc",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description":
+    "A webpack v2 Typescript boilerplate with granular control of and extensible webpack config",
   "homepage": "",
   "author": {
     "name": "Andy Lui",
