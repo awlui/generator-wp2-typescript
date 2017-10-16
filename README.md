@@ -1,19 +1,19 @@
-# generator-wp-2-typescript [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-wp2-typescript [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > 
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-wp-2-typescript using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-wp2-typescript using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-wp-2-typescript
+npm install -g generator-wp2-typescript
 ```
 
 Then generate your new project:
 
 ```bash
-yo wp-2-typescript
+yo wp2-typescript
 ```
 
 ## Getting To Know Yeoman
@@ -28,11 +28,11 @@ yo wp-2-typescript
 MIT © [Andy Lui]()
 
 
-[npm-image]: https://badge.fury.io/js/generator-wp-2-typescript.svg
-[npm-url]: https://npmjs.org/package/generator-wp-2-typescript
-[travis-image]: https://travis-ci.org/awlui/generator-wp-2-typescript.svg?branch=master
-[travis-url]: https://travis-ci.org/awlui/generator-wp-2-typescript
-[daviddm-image]: https://david-dm.org/awlui/generator-wp-2-typescript.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/awlui/generator-wp-2-typescript
-[coveralls-image]: https://coveralls.io/repos/awlui/generator-wp-2-typescript/badge.svg
-[coveralls-url]: https://coveralls.io/r/awlui/generator-wp-2-typescript
+[npm-image]: https://badge.fury.io/js/generator-wp2-typescript.svg
+[npm-url]: https://npmjs.org/package/generator-wp2-typescript
+[travis-image]: https://travis-ci.org/awlui/generator-wp2-typescript.svg?branch=master
+[travis-url]: https://travis-ci.org/awlui/generator-wp2-typescript
+[daviddm-image]: https://david-dm.org/awlui/generator-wp2-typescript.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/awlui/generator-wp2-typescript
+[coveralls-image]: https://coveralls.io/repos/awlui/generator-wp2-typescript/badge.svg
+[coveralls-url]: https://coveralls.io/r/awlui/generator-wp2-typescript
