@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Andy Lui",
+      "authorEmail": "awlui2014@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}
