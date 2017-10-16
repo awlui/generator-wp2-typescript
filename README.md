@@ -7,13 +7,13 @@ First, install [Yeoman](http://yeoman.io) and generator-wp2-typescript using [np
 
 ```bash
 npm install -g yo
-npm install -g generator-wp2-typescript
+npm install -g generator-wp-2-tsc
 ```
 
 Then generate your new project:
 
 ```bash
-yo wp2-typescript
+yo wp-2-tsc
 ```
 
 ## Getting To Know Yeoman
