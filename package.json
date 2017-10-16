@@ -70,6 +70,6 @@
     },
     "plugins": ["prettier"]
   },
-  "repository": "awlui/generator-wp-2-tsc",
+  "repository": "awlui/generator-wp-2-typescript",
   "license": "MIT"
 }
