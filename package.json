@@ -39,7 +39,7 @@
   },
   "scripts": {
     "prepublish": "nsp check",
-    "pretest": "eslint .",
+    "pretest": "eslint . --fix",
     "precommit": "lint-staged",
     "test": "jest",
     "semantic-release":
