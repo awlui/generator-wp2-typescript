@@ -2,24 +2,21 @@ import { dude } from './foo';
 import * as bar from './bar';
 export class App {
     constructor(public name: string) {}
-    met() {
+    public met() {
         dude(0);
     }
-    arrange() {
+    public arrange() {
         dude(8);
     }
-    package(a: number) {
+    public package(a: number) {
         if (a > 10) {
-            console.log('five')
+            console.log('five');
         } else {
-            console.log('bad')
+            console.log('bad');
         }
-
     }
-    untested() {
-        let a = 10;
+    public untested() {
+        const a = 10;
         this.package(20);
-
     }
 }
-
