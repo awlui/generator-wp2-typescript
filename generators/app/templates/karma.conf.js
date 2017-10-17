@@ -12,15 +12,15 @@ module.exports = function(config) {
 
     // List of files / patterns to load in the browser
     files: [
-    './src/**/*.spec.ts',
+    'karma-bundle.js',
+    'src/**/!(*spec)*.ts',
     'node_modules/phantomjs-polyfill/bind-polyfill.js',
     ],
 
     // List of preprocessors
     preprocessors: {
-      './src/**/*.spec.ts': ['webpack']
-      
-
+      'karma-bundle.js': ['webpack'],
+      'src/**/!(*spec)*.ts': ['webpack']
     },
 
     webpack: webpackConfig,

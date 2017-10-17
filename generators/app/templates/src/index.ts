@@ -1,22 +1,9 @@
-import { dude } from './foo';
-import * as bar from './bar';
-export class App {
+export class DemoApp {
     constructor(public name: string) {}
-    public met() {
-        dude(0);
+    public dummyMethod() {
+         return 'Demo Result';
     }
-    public arrange() {
-        dude(8);
-    }
-    public package(a: number) {
-        if (a > 10) {
-            console.log('five');
-        } else {
-            console.log('bad');
-        }
-    }
-    public untested() {
-        const a = 10;
-        this.package(20);
+    public dummyMethod2() {
+        return 'No Result';
     }
 }
