@@ -36,4 +36,3 @@ MIT © [Andy Lui]()
 [daviddm-url]: https://david-dm.org/awlui/generator-wp-2-tsc
 [coveralls-image]: https://coveralls.io/repos/awlui/generator-wp-2-tsc/badge.svg
 [coveralls-url]: https://coveralls.io/r/awlui/generator-wp-2-tsc
-https://badge.fury.io/js/generator-wp-2-tsc.svg

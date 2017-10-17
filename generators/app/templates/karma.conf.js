@@ -2,7 +2,6 @@
 var path = require('path');
 var webpackConfig = require('./webpack.config')('test');
 webpackConfig.entry = null;
-console.log(webpackConfig.module)
 module.exports = function(config) {
   config.set({
     // Base path, that will be used to resolve files and exclude
@@ -29,6 +28,7 @@ module.exports = function(config) {
       stats: {
         colors: true,
       },
+      noInfo: true
     },
     reporters: ['progress', 'spec', 'coverage-istanbul'],
     coverageIstanbulReporter: {

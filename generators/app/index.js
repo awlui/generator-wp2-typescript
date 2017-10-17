@@ -12,16 +12,16 @@ module.exports = class extends Generator {
 
     const prompts = [
       {
-        type: 'confirm',
-        name: 'generate',
-        message: 'Would you like to generate the boilerplate?',
-        default: true
-      },
-      {
         type: 'input',
         name: 'projectName',
         message: 'Project Name:',
         default: this.appname
+      },
+      {
+        type: 'confirm',
+        name: 'generate',
+        message: 'Would you like to generate the boilerplate?',
+        default: true
       }
     ];
 
@@ -29,6 +29,10 @@ module.exports = class extends Generator {
       // To access props later use this.props.someAnswer;
       this.generate = props.generate;
       this.projectName = props.projectName;
+      if (!this.generate) {
+        this.log.error('WELL ALL RIGHT THEN!!');
+        process.exit(1);
+      }
     });
   }
 
