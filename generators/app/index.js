@@ -2,6 +2,7 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
+const mkdirp = require('mkdirp');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
@@ -37,17 +38,23 @@ module.exports = class extends Generator {
 
   writing() {
     let sourceDir = this.projectName;
-
-    this.destinationRoot(sourceDir);
-    this.fs.copyTpl(
-      this.templatePath('_package.json'),
-      this.destinationPath(`package.json`),
-      {
-        name: this.projectName
+    mkdirp(sourceDir, err => {
+      if (err) {
+        console.log(err);
+        console.log('Try Again');
+        return;
       }
-    );
-    this.fs.copy(this.templatePath('**/!(_package.json)'), this.destinationRoot());
-    this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+      this.destinationRoot(sourceDir);
+      this.fs.copyTpl(
+        this.templatePath('_package.json'),
+        this.destinationPath(`package.json`),
+        {
+          name: this.projectName
+        }
+      );
+      this.fs.copy(this.templatePath('**/!(_package.json)'), this.destinationRoot());
+      this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+    });
   }
 
   install() {
