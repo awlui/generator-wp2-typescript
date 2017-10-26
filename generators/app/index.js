@@ -46,6 +46,13 @@ module.exports = class extends Generator {
       }
       this.fs.copy(this.templatePath('**/*'), this.destinationRoot());
       this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+      this.fs.copyTpl(
+        this.templatePath('_package.json'),
+        this.destinationPath('package.json'),
+        {
+          name: this.projectName
+        }
+      );
     });
   }
 

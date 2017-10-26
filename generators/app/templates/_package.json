@@ -1,5 +1,5 @@
 {
-  "name": "generator-wp2-tsc",
+  "name": "<%= name %>",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Andy Lui <awlui2014@gmail.com> (https://awlui.github.io/)",
