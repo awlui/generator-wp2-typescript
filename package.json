@@ -1,6 +1,6 @@
 {
   "name": "generator-wp-2-tsc",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description":
     "A webpack v2 Typescript boilerplate with granular control of and extensible webpack config",
   "homepage": "",

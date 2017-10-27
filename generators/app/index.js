@@ -20,7 +20,7 @@ module.exports = class extends Generator {
       {
         type: 'confirm',
         name: 'generate',
-        message: 'Would you like to generate the boilerplate?',
+        message: 'Would you like to create a new file for the boilerplate?',
         default: true
       }
     ];
@@ -29,22 +29,31 @@ module.exports = class extends Generator {
       // To access props later use this.props.someAnswer;
       this.generate = props.generate;
       this.projectName = props.projectName;
-      if (!this.generate) {
-        this.log.error('WELL ALL RIGHT THEN!!');
-        process.exit(1);
-      }
     });
   }
 
   writing() {
     let sourceDir = this.projectName;
-    mkdirp(sourceDir, err => {
-      if (err) {
-        console.log(err);
-        console.log('Try Again');
-        return;
-      }
-      this.destinationRoot(sourceDir);
+
+    if (this.generate) {
+      mkdirp(sourceDir, err => {
+        if (err) {
+          console.log(err);
+          console.log('Try Again');
+          return;
+        }
+        this.destinationRoot(sourceDir);
+        this.fs.copyTpl(
+          this.templatePath('_package.json'),
+          this.destinationPath(`package.json`),
+          {
+            name: this.projectName
+          }
+        );
+        this.fs.copy(this.templatePath('**/!(_package.json)'), this.destinationRoot());
+        this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+      });
+    } else {
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath(`package.json`),
@@ -54,7 +63,7 @@ module.exports = class extends Generator {
       );
       this.fs.copy(this.templatePath('**/!(_package.json)'), this.destinationRoot());
       this.fs.copy(this.templatePath('.*'), this.destinationRoot());
-    });
+    }
   }
 
   install() {
