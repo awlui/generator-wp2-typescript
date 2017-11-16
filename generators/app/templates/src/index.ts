@@ -1,9 +1,9 @@
 export class DemoApp {
     constructor(public name: string) {}
     public dummyMethod() {
-         return 'Demo Result';
+         return 'First Test';
     }
     public dummyMethod2() {
-        return 'No Result';
+        return 'Second Test';
     }
 }

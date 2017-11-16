@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const merge = require('webpack-merge');
 const parts = require('./webpack.parts');
 const nodeEnv = process.env.npm_lifecycle_event;
@@ -52,6 +53,7 @@ const developmentConfig = merge([
         template: 'public/index.html',
         chunksSortMode: 'dependency',
       }),
+      new CleanWebpackPlugin(['./dist'])
     ],
   }
 ]);

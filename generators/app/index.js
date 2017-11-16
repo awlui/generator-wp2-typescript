@@ -18,9 +18,15 @@ module.exports = class extends Generator {
         default: this.appname
       },
       {
+        type: 'input',
+        name: 'testFramework',
+        message: 'Karma or jest (K/j)',
+        default: 'Karma'
+      },
+      {
         type: 'confirm',
         name: 'generate',
-        message: 'Would you like to create a new file for the boilerplate?',
+        message: 'Would you like to create a new folder for the boilerplate?',
         default: true
       }
     ];
@@ -29,6 +35,7 @@ module.exports = class extends Generator {
       // To access props later use this.props.someAnswer;
       this.generate = props.generate;
       this.projectName = props.projectName;
+      this.testFramework = props.testFramework;
     });
   }
 
@@ -43,26 +50,10 @@ module.exports = class extends Generator {
           return;
         }
         this.destinationRoot(sourceDir);
-        this.fs.copyTpl(
-          this.templatePath('_package.json'),
-          this.destinationPath(`package.json`),
-          {
-            name: this.projectName
-          }
-        );
-        this.fs.copy(this.templatePath('**/!(_package.json)'), this.destinationRoot());
-        this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+        genPackage.apply(this);
       });
     } else {
-      this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath(`package.json`),
-        {
-          name: this.projectName
-        }
-      );
-      this.fs.copy(this.templatePath('**/!(_package.json)'), this.destinationRoot());
-      this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+      genPackage.apply(this);
     }
   }
 
@@ -70,3 +61,42 @@ module.exports = class extends Generator {
     // This.yarnInstall();
   }
 };
+
+function genPackage() {
+  if (
+    this.testFramework === 'Jest' ||
+    this.testFramework === 'jest' ||
+    this.testFramework === 'j' ||
+    this.testFramework === 'J'
+  ) {
+    this.fs.copyTpl(
+      this.templatePath('jest.package.json'),
+      this.destinationPath(`package.json`),
+      {
+        name: this.projectName
+      }
+    );
+    this.fs.copy(
+      this.templatePath('**/!(_package.json|karma*|jest*|spec)'),
+      this.destinationRoot()
+    );
+    this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+    this.fs.copyTpl(
+      this.templatePath('spec/jest.spec.ts'),
+      this.destinationPath(`spec/app.spec.ts`)
+    );
+  } else {
+    this.fs.copyTpl(
+      this.templatePath('karma.package.json'),
+      this.destinationPath(`package.json`),
+      {
+        name: this.projectName
+      }
+    );
+    this.fs.copy(
+      this.templatePath('**/!(_package.json|jest*|spec|karma.package.json)'),
+      this.destinationRoot()
+    );
+    this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+  }
+}

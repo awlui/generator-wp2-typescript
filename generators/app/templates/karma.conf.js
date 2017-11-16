@@ -30,7 +30,7 @@ module.exports = function(config) {
       },
       noInfo: true
     },
-    reporters: ['progress', 'spec', 'coverage-istanbul'],
+    reporters: ['progress', 'spec', 'coverage', 'coverage-istanbul'],
     coverageIstanbulReporter: {
       reports: ['html', 'text-summary', 'lcovonly'],
       fixWebpackSourcePaths: true,
