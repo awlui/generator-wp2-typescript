@@ -1,4 +1,6 @@
-# generator-wp-2-tsc [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# LIBRARY HAS BEEN DEPRECATED. USE AT OWN DISCRETION.
+## I will be introducing a new generator with more focus and less bugs in the future
+
 > 
 
 ## Installation
